@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>BigFanofMaths</title>
+    <link rel="icon" type="image/x-icon" href="browser.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Sansita:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Abyssinica+SIL&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-color: #FFFDF5;
+        }
+        .sansita-font {
+            font-family: 'Sansita', sans-serif;
+        }
+        h1 {
+            text-align: center;
+        }
+        p {
+            text-align: center;
+        }
+        .large-bold-italic {
+            font-size: 2em;
+            font-weight: bold;
+            font-style: italic;
+        }
+        .menu-icon {
+            float: left;
+            padding: 14px 16px;
+            height: 24px;
+            cursor: pointer;
+        }
+        .flex-container {
+            display: flex;
+            align-items: center;
+        }
+        .picture img {
+            margin-top: 20px;
+            margin-left: 100px;
+        }
+        .flex-container .content {
+            margin-left: 200px;
+        }
+        .main-content {
+            transition: margin-left 0.5s;
+        }
+        .button-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .button {
+            font-family: 'Sansita', sans-serif;
+            background-color: #78A57E;
+            border: none;
+            color: white;
+            padding: 50px 125px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 60px;
+            margin: 10px;
+            cursor: pointer;
+        }
+        .button2 {
+            background-color: #78A57E;
+        }
+    </style>
+</head>
+<body>
+    <div class="topnav">
+        <img src="menu-icon.png" class="menu-icon" alt="Menu Icon" onclick="openSidePanel()">
+        <div class="topnav-centered">
+            <a href="#homepage" class="active sansita-font large-bold-italic" style="font-size: 2em;">BigFanofMaths</a>
+        </div>
+        <div class="topnav-right">
+            <a href="#contact-us">Contact us</a>
+            <a href="#about-us">About us</a>
+        </div>
+    </div>
+
+    <div id="mySidePanel" class="sidepanel">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeSidePanel()">&times;</a>
+        <a href="#todaysquestions.html">Today's questions</a>
+        <a href="#yesterdaysquestions.html">Yesterday's questions</a>
+    </div>
+
+    <div class="main-content" id="mainContent">
+        <div class="flex-container">
+            <div class="picture">
+                <img src="Color logo with background.png" alt="Logo" width="524.5" height="183">
+            </div>
+            <div class="content">
+                <h1>Welcome to BigFanofMaths!</h1>
+                <p>A free website offering daily maths<br>questions for Year 7 and Year 8 students,<br>with answers provided the next day.</p>
+            </div>
+        </div>
+        <h1>Pick a year group to get started!</h1>
+        <div class="button-container">
+            <a href="year7.html" class="button">Year 7</a>
+            <a href="year8.html" class="button button2">Year 8</a>
+        </div>
+        <div style="height: 100px; background: #FFFDF5;"></div>
+    </div>
+
+    <script>
+        function openSidePanel() {
+            document.getElementById("mySidePanel").style.width = "200px";
+            document.getElementById("mainContent").style.marginLeft = "250px";
+        }
+
+        function closeSidePanel() {
+            document.getElementById("mySidePanel").style.width = "0";
+            document.getElementById("mainContent").style.marginLeft = "0";
+        }
+    </script>
+</body>
+</html>
+
+
+
+

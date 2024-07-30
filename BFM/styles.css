@@ -1,0 +1,142 @@
+/* Body style */
+body {
+  font-family: 'Abyssinica SIL';
+  font-weight: 100;
+  margin: 0;
+}
+
+.topnav {
+  position: relative;
+  background-color: #0C3B2E;
+  overflow: hidden;
+}
+
+/* Links inside the nav bar */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #78A57E;
+  color: black;
+}
+
+.topnav-centered a {
+  float: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.topnav-right {
+  float: right;
+}
+
+/* Responsive navigation menu for phones */
+@media screen and (max-width: 600px) {
+  .topnav a, .topnav-right {
+      float: none;
+      display: block;
+  }
+
+  .topnav-centered a {
+      position: relative;
+      top: 0;
+      left: 0;
+      transform: none;
+  }
+}
+
+/* Header */
+.header {
+  padding: 0.2px;
+  text-align: left;
+  background: #0C3B2E;
+  color: #E2DBD0;
+  font-size: 15px;
+}
+
+/* Flexbox container */
+.flex-container {
+  display: flex;
+  align-items: flex-start;
+}
+
+.picture img {
+  margin-top: 20px;
+  margin-left: 100px;
+}
+
+.flex-container .content {
+  margin-left: 200px;
+}
+
+/* Side panel styles */
+.sidepanel {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #78A57E;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidepanel a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #493D2F;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidepanel a:hover {
+  color: #2A231B;
+}
+
+.sidepanel .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 0;
+}
+
+/* Main content transition */
+.main-content {
+  transition: margin-left 0.5s;
+}
+
+/* Button styles */
+.button-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.button {
+  font-family: 'Sansita', sans-serif;
+  background-color: #78A57E;
+  border: none;
+  color: white;
+  padding: 50px 125px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 60px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.button2 {
+  background-color: #78A57E;
+}
