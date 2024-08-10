@@ -41,41 +41,56 @@
     </div>
 
     <div class="main-content" id="mainContent">
-        <div class="flex-container">
-            <div class="picture">
-                <img src="bfm.png" alt="Logo" width="300" height="300">
+        <h2 style="padding-left: 125px; font-size: 1.5em;" class="header">Yesterday's 5-a-day answers for Year 7</h2>
+        <div class="green-line"></div>
+        <div class="question-container">
+            <div class="question shadow">
+                <img src="fake question.png" alt="Question 1">
             </div>
-            <div class="content">
-                <h1 class="main-header">Welcome to BigFanofMaths!</h1>
-                <p class="main-paragraph">A free website offering daily maths<br>questions for Year 7 and Year 8 students,<br>with answers provided the next day.</p>
+            <div class="question shadow">
+                <img src="fake question.png" alt="Question 2">
             </div>
         </div>
-        <h2 class="centered-header">Pick a year group to get started!</h2>
-        <div class="green-line"></div> <!-- Added green line here -->
-        <div class="button-container">
-            <a href="year7.html" class="button">Year 7</a>
-            <a href="year8.html" class="button button2">Year 8</a>
-        </div>
-        <div style="height: 100px; background: #FFFDF5;"></div>
     </div>
+<!-- Green box with text slideshow -->
+<div class="text-slideshow-container">
+    <div class="text-slideshow">
+        <p>Epic Joke of the Day: Why was 6 scared of 7? 7, 8, 9!</p>
+        <p>Why do plants hate maths? Because it gives them square roots</p>
+        <p>Did you know? A 'jiffy' is an actual unit of time.</p>
+        <!-- Add more texts as needed -->
+    </div>
+</div>
 
     <script>
         function openSidePanel() {
             document.getElementById("mySidePanel").style.width = "200px";
-            document.getElementById("mainContent").style.marginLeft = "200px";
+            document.getElementById("mainContent").style.marginLeft = "250px";
         }
 
         function closeSidePanel() {
             document.getElementById("mySidePanel").style.width = "0";
             document.getElementById("mainContent").style.marginLeft = "0";
         }
+
+        // text slideshow
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.text-slideshow p');
+        const totalSlides = slides.length;
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.style.display = (i === index) ? 'block' : 'none';
+            });
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            showSlide(currentSlide);
+        }
+
+        setInterval(nextSlide, 6000); // minute=60000ms
+        showSlide(currentSlide); // Show the first slide initially
     </script>
 </body>
 </html>
-
-
-
-
-
-
-

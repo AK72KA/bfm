@@ -3,8 +3,11 @@ body {
   font-family: 'Abyssinica SIL';
   font-weight: 100;
   margin: 0;
+  background-color: #FFFDF5;
+  overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
+/* Top navigation bar */
 .topnav {
   position: relative;
   background-color: #0C3B2E;
@@ -14,7 +17,7 @@ body {
 /* Links inside the nav bar */
 .topnav a {
   float: left;
-  color: #f2f2f2;
+  color: #e2dbd0;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -41,47 +44,37 @@ body {
 /* Responsive navigation menu for phones */
 @media screen and (max-width: 600px) {
   .topnav a, .topnav-right {
-      float: none;
-      display: block;
+    float: none;
+    display: block;
   }
 
   .topnav-centered a {
-      position: relative;
-      top: 0;
-      left: 0;
-      transform: none;
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: none;
   }
-}
-
-/* Header */
-.header {
-  padding: 0.2px;
-  text-align: left;
-  background: #0C3B2E;
-  color: #E2DBD0;
-  font-size: 15px;
 }
 
 /* Flexbox container */
 .flex-container {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
 }
 
 .picture img {
-  margin-top: 20px;
-  margin-left: 100px;
+  margin-left: 150px; /* Shift image towards left */
 }
 
 .flex-container .content {
-  margin-left: 200px;
+  margin-left: 100px; /* Increase gap between image and text */
 }
 
 /* Side panel styles */
 .sidepanel {
   height: 100%;
   width: 0;
-  position: fixed;
+  position: fixed; /* Fixed positioning */
   z-index: 1;
   top: 0;
   left: 0;
@@ -104,17 +97,41 @@ body {
   color: #2A231B;
 }
 
-.sidepanel .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 0;
+/* Dropdown container */
+.dropdown {
+  position: relative;
+  display: block;
+}
+
+.dropdown-content {
+  display: none;
+  position: relative;
+  background-color: #78A57E;
+  min-width: 200px;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #78A57E;
+  color: white;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
 }
 
 /* Main content transition */
 .main-content {
   transition: margin-left 0.5s;
+  padding: 16px;
 }
 
 /* Button styles */
@@ -124,7 +141,7 @@ body {
 }
 
 .button {
-  font-family: 'Sansita', sans-serif;
+  font-family: 'Sansita One', sans-serif;
   background-color: #78A57E;
   border: none;
   color: white;
@@ -140,3 +157,102 @@ body {
 .button2 {
   background-color: #78A57E;
 }
+
+/* Custom font styles */
+.sansita-font {
+  font-family: 'Sansita One', sans-serif;
+}
+
+h2.centered-header {
+  text-align: center;
+}
+
+p {
+  text-align: center;
+}
+
+.large-bold-italic {
+  font-size: 2em;
+  font-weight: 40px;
+  font-style: italic;
+}
+
+.menu-icon {
+  float: left;
+  padding: 14px 16px;
+  height: 24px;
+  cursor: pointer;
+}
+
+.main-header,
+.main-paragraph {
+  text-align: center; /* Center-align header and paragraph */
+}
+
+/* Lighter header */
+.main-header {
+  font-weight: 500;
+  font-size: 2.5em;
+}
+
+.main-paragraph {
+  font-size: 1.5em;
+}
+
+/* Shadow effect */
+.shadow {
+  width: 100%;
+  box-shadow: 0 0px 8px 0 rgba(0, 0, 0, 0.2), 0 0px 20px 0 rgba(0, 0, 0, 0.19);
+  margin: 20px 0;
+  text-align: left;
+  background: white;
+}
+
+.question-container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.question img {
+  width: 100%;
+  height: auto;
+}
+
+/* Green line */
+.green-line {
+  width: 80%;
+  height: 5px;
+  background-color: #78A57E;
+  margin: 0 auto;
+  margin-top: -10px; /* Adjust margin as needed */
+}
+
+/* Text slideshow container */
+.text-slideshow-container {
+  width: 80%;
+  background-color: #607d61;
+  color: white;
+  font-family: 'Sansita One', sans-serif;
+  padding: 20px;
+  margin: 20px auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.text-slideshow p {
+  display: none;
+  text-align: center;
+  font-size: 1.2em;
+  margin: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
