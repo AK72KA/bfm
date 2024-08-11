@@ -1,10 +1,31 @@
 /* Body style */
 body {
-  font-family: 'Abyssinica SIL';
-  font-weight: 100;
+  font-family: 'Abyssinica SIL', serif; /* Default to Abyssinica SIL for the entire body */
   margin: 0;
   background-color: #FFFDF5;
   overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* Override specific font styles */
+.sansita-font, .button {
+  font-family: 'Sansita One', sans-serif !important; /* Sansita One for specified elements */
+}
+
+/* Centered header for "Pick a year group to get started!" */
+h2.centered-header {
+  font-family: 'Plus Jakarta Sans', sans-serif !important;
+  text-align: center;
+  font-size: 2em;
+  margin: 20px 0; /* Add some margin for spacing */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+
+.main-paragraph, .centered-header {
+  font-family: 'Plus Jakarta Sans', sans-serif !important; /* Plus Jakarta Sans for specified text */
 }
 
 /* Top navigation bar */
@@ -14,7 +35,6 @@ body {
   overflow: hidden;
 }
 
-/* Links inside the nav bar */
 .topnav a {
   float: left;
   color: #e2dbd0;
@@ -41,7 +61,6 @@ body {
   float: right;
 }
 
-/* Responsive navigation menu for phones */
 @media screen and (max-width: 600px) {
   .topnav a, .topnav-right {
     float: none;
@@ -63,18 +82,18 @@ body {
 }
 
 .picture img {
-  margin-left: 150px; /* Shift image towards left */
+  margin-left: 150px;
+  margin-top: 15px;
 }
 
 .flex-container .content {
-  margin-left: 100px; /* Increase gap between image and text */
+  margin-left: 100px;
 }
 
-/* Side panel styles */
 .sidepanel {
   height: 100%;
   width: 0;
-  position: fixed; /* Fixed positioning */
+  position: fixed;
   z-index: 1;
   top: 0;
   left: 0;
@@ -97,7 +116,6 @@ body {
   color: #2A231B;
 }
 
-/* Dropdown container */
 .dropdown {
   position: relative;
   display: block;
@@ -123,18 +141,15 @@ body {
   color: white;
 }
 
-/* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
   display: block;
 }
 
-/* Main content transition */
 .main-content {
   transition: margin-left 0.5s;
   padding: 16px;
 }
 
-/* Button styles */
 .button-container {
   text-align: center;
   margin-top: 20px;
@@ -152,29 +167,19 @@ body {
   font-size: 60px;
   margin: 10px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: rgba(79, 109, 90, 1);
 }
 
 .button2 {
   background-color: #78A57E;
 }
 
-/* Custom font styles */
-.sansita-font {
-  font-family: 'Sansita One', sans-serif;
-}
-
-h2.centered-header {
-  text-align: center;
-}
-
-p {
-  text-align: center;
-}
-
-.large-bold-italic {
-  font-size: 2em;
-  font-weight: 40px;
-  font-style: italic;
+.button2:hover {
+  background-color: rgba(79, 109, 90, 1);
 }
 
 .menu-icon {
@@ -184,22 +189,19 @@ p {
   cursor: pointer;
 }
 
-.main-header,
-.main-paragraph {
-  text-align: center; /* Center-align header and paragraph */
-}
-
-/* Lighter header */
 .main-header {
+  font-family: 'Abyssinica SIL', serif; /* Abyssinica SIL for the main header */
+  text-align: center;
   font-weight: 500;
   font-size: 2.5em;
 }
 
 .main-paragraph {
+  text-align: center; /* Plus Jakarta Sans for the paragraph */
+  font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 1.5em;
 }
 
-/* Shadow effect */
 .shadow {
   width: 100%;
   box-shadow: 0 0px 8px 0 rgba(0, 0, 0, 0.2), 0 0px 20px 0 rgba(0, 0, 0, 0.19);
@@ -219,21 +221,18 @@ p {
   height: auto;
 }
 
-/* Green line */
 .green-line {
   width: 80%;
   height: 5px;
   background-color: #78A57E;
   margin: 0 auto;
-  margin-top: -10px; /* Adjust margin as needed */
+  margin-top: -10px;
 }
 
-/* Text slideshow container */
 .text-slideshow-container {
   width: 80%;
   background-color: #607d61;
   color: white;
-  font-family: 'Sansita One', sans-serif;
   padding: 20px;
   margin: 20px auto;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -245,6 +244,10 @@ p {
   font-size: 1.2em;
   margin: 0;
 }
+
+
+
+
 
 
 

@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Sansita+One:wght@400&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Abyssinica+SIL&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="jj.css">
 </head>
 <body>
     <div class="topnav">
@@ -41,17 +42,16 @@
     </div>
 
     <div class="main-content" id="mainContent">
-        <h2 style="padding-left: 125px; font-size: 1.5em;" class="header">Today's 5-a-day for Year 8</h2>
+        <h2 style="padding-left: 125px; font-size: 1.5em;" class="header">Today's 5-a-day for Year 7</h2>
         <div class="green-line"></div>
-        <div class="question-container">
-            <div class="question shadow">
-                <img src="fake question.png" alt="Question 1">
-            </div>
-            <div class="question shadow">
-                <img src="fake question.png" alt="Question 2">
-            </div>
-        </div>
+
     </div>
+    
+    <div class="ppt-container">
+        <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vRNzzjlsOOMv2li5J9bNEphMJcLzRQxzvTAIiudqOiUXv_U0uUMEUlRNgrAr4F9dzBIgiMFHyNnG8l3/embed?start=false&loop=false&delayms=60000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+    </div>
+
+
 <!-- Green box with text slideshow -->
 <div class="text-slideshow-container">
     <div class="text-slideshow">
@@ -63,15 +63,19 @@
 </div>
 
     <script>
-        function openSidePanel() {
-            document.getElementById("mySidePanel").style.width = "200px";
-            document.getElementById("mainContent").style.marginLeft = "250px";
-        }
+function openSidePanel() {
+    document.getElementById("mySidePanel").style.width = "200px";
+    document.getElementById("mainContent").style.marginLeft = "250px";
+    document.querySelector(".ppt-container").style.marginLeft = "250px"; // Adjust the ppt-container
+}
 
-        function closeSidePanel() {
-            document.getElementById("mySidePanel").style.width = "0";
-            document.getElementById("mainContent").style.marginLeft = "0";
-        }
+function closeSidePanel() {
+    document.getElementById("mySidePanel").style.width = "0";
+    document.getElementById("mainContent").style.marginLeft = "0";
+    document.querySelector(".ppt-container").style.marginLeft = "auto"; // Reset to original centered position
+}
+
+
 
         // text slideshow
         let currentSlide = 0;
@@ -94,5 +98,3 @@
     </script>
 </body>
 </html>
-
-
