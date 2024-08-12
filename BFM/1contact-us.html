@@ -11,68 +11,49 @@
     <link href="https://fonts.googleapis.com/css2?family=Abyssinica+SIL&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <style>
-        /* General button styles */
-        .button {
-            font-family: 'Sansita One', sans-serif;
-            background-color: #78A57E;
-            border: none;
-            color: white;
-            padding: 135px 135px; /* Increased padding for larger buttons */
+        .contact-form {
+            width: 100%;
+            max-width: 600px;
+            margin: 50px auto; /* Adjust margin for spacing */
+            padding: 30px;
+            background-color: #d2d2d2;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        .contact-form h2 {
             text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 70px; /* Increased font size */
-            margin: 20px; /* Added margin for better spacing */
+            margin-bottom: 20px;
+            font-family: 'Sansita One', sans-serif;
+        }
+        .contact-form label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-family: inherit;
+        }
+        .contact-form button {
+            width: 100%;
+            padding: 10px;
+            background-color: #78A57E;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
             cursor: pointer;
             transition: background-color 0.3s ease;
+            font-family: 'Sansita One', sans-serif;
         }
-
-        .button2 {
-            background-color: #78A57E;
-        }
-
-        .button:hover, .button2:hover {
-            background-color: rgba(79, 109, 90, 1); /* Color when hovered */
-        }
-
-        /* Styles for the side panel and content shifting */
-        .sidepanel {
-            height: 100%;
-            width: 0;
-            position: fixed;
-            z-index: 1;
-            top: 0;
-            left: 0;
-            background-color: #111;
-            overflow-x: hidden;
-            transition: 0.5s;
-            padding-top: 60px;
-        }
-
-        .sidepanel a {
-            padding: 8px 8px 8px 32px;
-            text-decoration: none;
-            font-size: 25px;
-            color: white;
-            display: block;
-            transition: 0.3s;
-        }
-
-        .sidepanel a:hover {
-            color: #f1f1f1;
-        }
-
-        .sidepanel .closebtn {
-            position: absolute;
-            top: 0;
-            right: 25px;
-            font-size: 36px;
-            margin-left: 50px;
-        }
-
-        #mainContent {
-            transition: margin-left 0.5s;
-            padding: 20px;
+        .contact-form button:hover {
+            background-color: rgba(79, 109, 90, 1);
         }
     </style>
 </head>
@@ -106,27 +87,38 @@
         </div>
     </div>
 
-    <!-- Main content that will shift -->
-    <div id="mainContent">
-        <h2 class="centered-header">Pick a year group to get started!</h2>
-        <div class="green-line"></div> <!-- Added green line here -->
-        <div class="button-container">
-            <a href="Year7-today.html" class="button">Year 7</a>
-            <a href="year8-today.html" class="button button2">Year 8</a>
-        </div>
-        <div style="height: 100px; background: #FFFDF5;"></div>
+    <div class="contact-form">
+        <h2>Contact Us</h2>
+        <form action="mailto:akajansivakumaran@gmail.com" method="post" enctype="text/plain">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
     </div>
 
     <script>
         function openSidePanel() {
             document.getElementById("mySidePanel").style.width = "200px";
-            document.getElementById("mainContent").style.marginLeft = "200px";
+            document.body.style.marginLeft = "200px";  // Adjust body margin when side panel opens
         }
 
         function closeSidePanel() {
             document.getElementById("mySidePanel").style.width = "0";
-            document.getElementById("mainContent").style.marginLeft = "0";
+            document.body.style.marginLeft = "0";  // Adjust body margin when side panel closes
         }
     </script>
 </body>
 </html>
+
+
+
+
+
+

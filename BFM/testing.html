@@ -1,70 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>BigFanofMaths</title>
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="browser.png">
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Sansita:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Abyssinica+SIL&display=swap" rel="stylesheet">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="testing.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us Form</title>
+    <link rel="stylesheet" href="styles2.css">
 </head>
 <body>
-    <!-- Navigation bar -->
-    <div class="topnav">
-        <img src="menu-icon.png" class="menu-icon" alt="Menu Icon" onclick="openSidePanel()">
-        <!-- Centered link -->
-        <div class="topnav-centered">
-            <a href="#homepage" class="active sansita-font large-bold-italic" style="font-size: 2em;">BigFanofMaths</a>
-        </div>
-        <!-- Right-aligned links -->
-        <div class="topnav-right">
-            <a href="#contact-us">Contact us</a>
-            <a href="#about-us">About us</a>
-        </div>
-    </div>
-
-    <!-- Side panel -->
-    <div id="mySidePanel" class="sidepanel">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeSidePanel()">&times;</a>
-        <a href="todaysquestions.html">Today's questions</a>
-        <a href="yesterdaysquestions.html">Yesterday's questions</a>
-    </div>
-
-    <!-- Main content -->
-    <div class="main-content" id="mainContent">
-        <!-- Flexbox container -->
-        <div class="flex-container">
-            <div class="picture">
-                <img src="bfm.png" alt="Logo" width="300" height="300">
+    <div class="contact-form-container">
+        <form action="submit_form.php" method="post">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="first-name">First Name *</label>
+                    <input type="text" id="first-name" name="first-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="last-name">Last Name *</label>
+                    <input type="text" id="last-name" name="last-name" required>
+                </div>
             </div>
-            <div class="content">
-                <h1>Welcome to BigFanofMaths!</h1>
-                <p>A free website offering daily maths<br>questions for Year 7 and Year 8 students,<br>with answers provided the next day.</p>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
             </div>
-        </div>
-        <h1>Pick a year group to get started!</h1>
-        <div class="button-container">
-            <a href="year7.html" class="button">Year 7</a>
-            <a href="year8.html" class="button button2">Year 8</a>
-        </div>
-        <div style="height: 100px; background: #FFFDF5;"></div>
+
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="4"></textarea>
+            </div>
+
+            <div class="form-group">
+                <button type="submit" class="submit-button">Submit</button>
+            </div>
+        </form>
     </div>
-
-    <!-- JavaScript -->
-    <script>
-        function openSidePanel() {
-            document.getElementById("mySidePanel").style.width = "200px";
-            document.getElementById("mainContent").style.marginLeft = "250px";
-        }
-
-        function closeSidePanel() {
-            document.getElementById("mySidePanel").style.width = "0";
-            document.getElementById("mainContent").style.marginLeft = "0";
-        }
-    </script>
 </body>
 </html>
+
