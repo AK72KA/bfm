@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-M1GNYPJXMR"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-M1GNYPJXMR');
+    </script>
+
+    <title>Today's Questions</title>
+    <link rel="icon" type="image/x-icon" href="browser.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Sansita+One:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Abyssinica+SIL&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* General button styles */
+        .button {
+            font-family: 'Sansita One', sans-serif;
+            background-color: #78A57E;
+            border: none;
+            color: white;
+            padding: 135px 135px; /* Increased padding for larger buttons */
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 70px; /* Increased font size */
+            margin: 20px; /* Added margin for better spacing */
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .button2 {
+            background-color: #78A57E;
+        }
+
+        .button:hover, .button2:hover {
+            background-color: rgba(79, 109, 90, 1); /* Color when hovered */
+        }
+
+        #mainContent {
+            transition: margin-left 0.5s;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Cookie Consent by TermsFeed https://www.TermsFeed.com -->
+    <script type="text/javascript" src="https://www.termsfeed.com/public/cookie-consent/4.1.0/cookie-consent.js" charset="UTF-8"></script>
+    <script type="text/javascript" charset="UTF-8">
+    document.addEventListener('DOMContentLoaded', function () {
+    cookieconsent.run({"notice_banner_type":"simple","consent_type":"express","palette":"light","language":"en","page_load_consent_levels":["strictly-necessary"],"notice_banner_reject_button_hide":false,"preferences_center_close_button_hide":false,"page_refresh_confirmation_buttons":false,"website_name":"www.bigfanofmaths.com"});
+    });
+    </script>
+   
+    <!-- Google Analytics -->
+       <script type="text/plain" data-cookie-consent="tracking" async src="https://www.googletagmanager.com/gtag/js?id=G-M1GNYPJXMR"></script>
+       <script type="text/plain" data-cookie-consent="tracking">
+         window.dataLayer = window.dataLayer || [];
+         function gtag(){dataLayer.push(arguments);}
+         gtag('js', new Date());
+   
+         gtag('config', 'G-M1GNYPJXMR');
+       </script>
+    <!-- end of Google Analytics-->
+   
+    <noscript>Free cookie consent management tool by <a href="https://www.termsfeed.com/">TermsFeed</a></noscript>
+    <!-- End Cookie Consent by TermsFeed https://www.TermsFeed.com -->
+   
+    <!-- Below is the link that users can use to open Preferences Center to change their preferences. Do not modify the ID parameter. Place it where appropriate, style it as needed. -->
+   
+    <a href="#" id="open_preferences_center">Update cookies preferences</a>
+
+    <div class="topnav">
+        <img src="menu-icon.png" class="menu-icon" alt="Menu Icon" onclick="openSidePanel()">
+        <div class="topnav-centered">
+            <a href="index.html" class="active sansita-font large-italic" style="font-size: 2em;">BigFanofMaths</a>
+        </div>
+        <div class="topnav-right">
+            <a href="contact-us.html">Contact us</a>
+            <a href="about-us.html">About us</a>
+        </div>
+    </div>
+
+    <div id="mySidePanel" class="sidepanel">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeSidePanel()">&times;</a>
+        <div class="dropdown">
+            <a href="todaysquestions.html" class="dropdown-btn">Today's questions</a>
+            <div class="dropdown-content">
+                <a href="Year7-today.html">Year 7</a>
+                <a href="year8-today.html">Year 8</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <a href="yesterdaysquestions.html" class="dropdown-btn">Yesterday's answers</a>
+            <div class="dropdown-content">
+                <a href="year7-yesterday.html">Year 7</a>
+                <a href="year8-yesterday.html">Year 8</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main content that will shift -->
+    <div id="mainContent">
+        <h2 class="centered-header">Pick a year group to get started!</h2>
+        <div class="green-line"></div> <!-- Added green line here -->
+        <div class="button-container">
+            <a href="Year7-today.html" class="button">Year 7</a>
+            <a href="year8-today.html" class="button button2">Year 8</a>
+        </div>
+        <div style="height: 100px; background: #FFFDF5;"></div>
+    </div>
+
+    <script>
+        function openSidePanel() {
+            document.getElementById("mySidePanel").style.width = "200px";
+            document.getElementById("mainContent").style.marginLeft = "200px";
+        }
+
+        function closeSidePanel() {
+            document.getElementById("mySidePanel").style.width = "0";
+            document.getElementById("mainContent").style.marginLeft = "0";
+        }
+    </script>
+</body>
+</html>

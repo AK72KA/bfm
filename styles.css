@@ -1,0 +1,404 @@
+/* Date and Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.datetime {
+  margin-right: 20px;
+  font-size: 1em;
+  color: #000000;
+}
+
+/* Body Styles */
+body {
+  font-family: 'Abyssinica SIL', serif;
+  margin: 0;
+  background-color: #FFFDF5;
+  overflow-x: hidden;
+}
+
+/* Override specific font styles */
+.sansita-font, .button {
+  font-family: 'Sansita One', sans-serif;
+}
+
+h2.centered-header {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  text-align: center;
+  font-size: 2em;
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.main-paragraph, .centered-header {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+/* Top Navigation Bar */
+.topnav {
+  position: relative;
+  background-color: #0C3B2E;
+  overflow: hidden;
+  margin-bottom: 0;
+}
+
+.topnav a {
+  float: left;
+  color: #e2dbd0;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #78A57E;
+  color: black;
+}
+
+.topnav-centered a {
+  float: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.topnav-right {
+  float: right;
+}
+
+.menu-icon {
+  float: left;
+  padding: 14px 16px;
+  height: 24px;
+  cursor: pointer;
+}
+
+/* Hide "Contact us" and "About us" on Phones */
+@media screen and (max-width: 768px) {
+  .topnav-right {
+    display: none;
+  }
+
+  .topnav-centered {
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+/* Show "Contact us" and "About us" on Laptops */
+@media screen and (min-width: 769px) {
+  .topnav-right {
+    display: block;
+  }
+
+  .topnav-centered {
+    left: 50%; /* Keep centered on larger screens */
+  }
+}
+
+/* Hide and Show Elements Based on Screen Size */
+@media screen and (max-width: 768px) {
+  .desktop-only {
+    display: none;
+  }
+
+  .mobile-only {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .desktop-only {
+    display: block;
+  }
+
+  .mobile-only {
+    display: none;
+  }
+}
+
+/* Flexbox Container */
+.flex-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.picture img {
+  width: 300px;
+  height: auto;
+  margin: 15px;
+}
+
+/* Centered Text Content */
+.flex-container .content {
+  margin: 15px;
+  text-align: center;
+}
+
+.sidepanel {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #78A57E; /*  */
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidepanel a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #493D2F;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidepanel a:hover {
+  color: #2A231B;
+}
+
+.dropdown {
+  position: relative;
+  display: block;
+}
+
+.dropdown-content {
+  display: none;
+  position: relative;
+  background-color: #78A57E;
+  min-width: 200px;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #78A57E;
+  color: white;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Main Content */
+.main-content {
+  transition: margin-left 0.5s;
+  padding: 16px;
+  margin-top: 0; /* Removes space above main content */
+}
+
+/* Button Container and Styles */
+.button-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.button {
+  font-family: 'Sansita One', sans-serif;
+  background-color: #78A57E;
+  border: none;
+  color: white;
+  padding: 150px 100px; /* Default padding for larger screens */
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 35px; /* Default font size for larger screens */
+  margin: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: rgba(79, 109, 90, 1);
+}
+
+.button2 {
+  background-color: #78A57E;
+}
+
+.button2:hover {
+  background-color: rgba(79, 109, 90, 1);
+}
+
+/* Main Header */
+.main-header {
+  font-family: 'Abyssinica SIL', serif;
+  text-align: center;
+  font-weight: 500;
+  font-size: 2.5em;
+  margin-top: 0;
+}
+
+.main-paragraph {
+  text-align: center;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.5em;
+}
+
+/* Shadow Effect */
+.shadow {
+  width: 100%;
+  box-shadow: 0 0px 8px 0 rgba(0, 0, 0, 0.2), 0 0px 20px 0 rgba(0, 0, 0, 0.19);
+  margin: 20px 0;
+  text-align: left;
+  background: white;
+}
+
+.question-container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.question img {
+  width: 100%;
+  height: auto;
+}
+
+.green-line {
+  width: 80%;
+  height: 5px;
+  background-color: #78A57E;
+  margin: 0 auto;
+  margin-top: -10px;
+}
+
+.text-slideshow-container {
+  width: 80%;
+  background-color: #607d61;
+  color: white;
+  padding: 20px;
+  margin: 20px auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.text-slideshow p {
+  display: none;
+  text-align: center;
+  font-size: 1.2em;
+  margin: 0;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  .topnav-centered a {
+    font-size: 1.5em;
+  }
+
+  .main-header {
+    font-size: 2.5em;
+  }
+
+  .centered-header {
+    font-size: 2em;
+  }
+
+  .main-paragraph {
+    font-size: 1em;
+  }
+
+  .flex-container {
+    padding: 20px;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .picture img {
+    max-width: 80%;
+    height: auto;
+    margin-left: 0;
+    margin-top: 15px;
+  }
+
+  .flex-container .content {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .button, .button2 {
+    padding: 80px 60px; /* Adjusted padding for smaller screens */
+    font-size: 25px; /* Adjusted font size */
+  }
+
+  .sidepanel {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .topnav-centered a {
+    font-size: 1.2em;
+  }
+
+  .main-header {
+    font-size: 2em;
+  }
+
+  .centered-header {
+    font-size: 1.5em;
+  }
+
+  .main-paragraph {
+    font-size: 0.9em;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .picture img {
+    max-width: 70%;
+    height: auto;
+    margin-left: 0;
+    margin-top: 10px;
+  }
+
+  .button, .button2 {
+    padding: 50px 30px; /* Further adjusted padding for extra small screens */
+    font-size: 20px; /* Further adjusted font size */
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

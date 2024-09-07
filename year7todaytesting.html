@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Year 7</title>
+    <link rel="icon" type="image/x-icon" href="browser.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Sansita+One:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Abyssinica+SIL&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="jj.css">
+</head>
+<body>
+    <div class="topnav">
+        <img src="menu-icon.png" class="menu-icon" alt="Menu Icon" onclick="openSidePanel()">
+        <div class="topnav-centered">
+            <a href="index.html" class="active sansita-font large-italic" style="font-size: 2em;">BigFanofMaths</a>
+        </div>
+        <div class="topnav-right">
+            <a href="contact-us.html">Contact us</a>
+            <a href="about-us.html">About us</a>
+        </div>
+    </div>
+
+    <div id="mySidePanel" class="sidepanel">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeSidePanel()">&times;</a>
+        <div class="dropdown">
+            <a href="todaysquestions.html" class="dropdown-btn">Today's questions</a>
+            <div class="dropdown-content">
+                <a href="Year7-today.html">Year 7</a>
+                <a href="year8-today.html">Year 8</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <a href="yesterdaysquestions.html" class="dropdown-btn">Yesterday's answers</a>
+            <div class="dropdown-content">
+                <a href="year7-yesterday.html">Year 7</a>
+                <a href="year8-yesterday.html">Year 8</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-content" id="mainContent">
+        <h2 style="text-align: center; font-size: 1.5em;" class="year-71">Today's 5-a-day for Year 7</h2>
+        <div class="green-line"></div>
+
+    </div>
+    
+    <div class="dynamic-iframe">
+      <iframe id="dynamic-iframe" width="960px" height="569px" frameborder="0">
+        This is an embedded <a target="_blank" href="https://office.com">Microsoft Office</a> presentation, powered by <a target="_blank" href="https://office.com/webapps">Office</a>.
+    </iframe>
+    
+        <script>
+            // Array of objects with date, time, and corresponding URL
+            const schedule = [
+              { date: '2024-08-19', time: '16:55', url: 'https://1drv.ms/p/c/f02bfec0c3d1e6f8/IQOn3BSDoVG8SIbmlC39bK5VAbjYSuzEBcwVJOa7dBQOwkg?em=2&amp;wdAr=1.7777777777777777&amp;wdEaaCheck=1' },
+              { date: '2024-08-20', time: '06:59', url: 'https://1drv.ms/p/c/f02bfec0c3d1e6f8/IQOn3BSDoVG8SIbmlC39bK5VAbjYSuzEBcwVJOa7dBQOwkg?em=2&amp;wdAr=1.7777777777777777&amp;wdEaaCheck=1' },
+              { date: '2024-08-21', time: '06:59', url: 'https://1drv.ms/p/c/f02bfec0c3d1e6f8/IQOYo7C-SvjvSYZALLfpwFfxAWKZ5tvLdEgnWPlxsQ_G09Q?em=2&amp;wdAr=1.7777777777777777' },
+              { date: '2024-08-22', time: '06:59', url: 'https://1drv.ms/p/c/f02bfec0c3d1e6f8/IQMb2tPRJvotSJS4ePtSgXAAAesQxgsrxSRHM5HGWJEV2lY?em=2&amp;wdAr=1.7777777777777777&amp;wdEaaCheck=0' },
+              { date: '2024-08-23', time: '06:59', url: 'https://1drv.ms/p/c/f02bfec0c3d1e6f8/IQOQwHO40E5sQqGYZe6ckDH-Ae6Sy2Gp3Tyzgu3rafUudVw?em=2&amp;wdAr=1.7777777777777777' },
+              { date: '2024-08-24', time: '06:59', url: 'https://1drv.ms/p/c/f02bfec0c3d1e6f8/IQOn3BSDoVG8SIbmlC39bK5VAbjYSuzEBcwVJOa7dBQOwkg?em=2&amp;wdAr=1.7777777777777777&amp;wdEaaCheck=1' },
+              { date: '2024-08-25', time: '06:59', url: 'https://1drv.ms/p/c/f02bfec0c3d1e6f8/IQOYo7C-SvjvSYZALLfpwFfxAWKZ5tvLdEgnWPlxsQ_G09Q?em=2&amp;wdAr=1.7777777777777777' },
+              { date: '2024-08-26', time: '06:59', url: 'https://1drv.ms/p/c/f02bfec0c3d1e6f8/IQMb2tPRJvotSJS4ePtSgXAAAesQxgsrxSRHM5HGWJEV2lY?em=2&amp;wdAr=1.7777777777777777&amp;wdEaaCheck=0' },
+              { date: '2024-08-27', time: '06:59', url: 'https://1drv.ms/p/c/f02bfec0c3d1e6f8/IQOQwHO40E5sQqGYZe6ckDH-Ae6Sy2Gp3Tyzgu3rafUudVw?em=2&amp;wdAr=1.7777777777777777' },
+              { date: '2024-08-28', time: '06:59', url: 'https://1drv.ms/p/c/f02bfec0c3d1e6f8/IQOn3BSDoVG8SIbmlC39bK5VAbjYSuzEBcwVJOa7dBQOwkg?em=2&amp;wdAr=1.7777777777777777&amp;wdEaaCheck=1' },
+              { date: '2024-08-29', time: '06:59', url: 'https://1drv.ms/p/c/f02bfec0c3d1e6f8/IQOYo7C-SvjvSYZALLfpwFfxAWKZ5tvLdEgnWPlxsQ_G09Q?em=2&amp;wdAr=1.7777777777777777' },
+              { date: '2024-08-30', time: '06:59', url: 'https://1drv.ms/p/c/f02bfec0c3d1e6f8/IQMb2tPRJvotSJS4ePtSgXAAAesQxgsrxSRHM5HGWJEV2lY?em=2&amp;wdAr=1.7777777777777777&amp;wdEaaCheck=0' },
+              { date: '2024-08-31', time: '06:59', url: 'https://1drv.ms/p/c/f02bfec0c3d1e6f8/IQOQwHO40E5sQqGYZe6ckDH-Ae6Sy2Gp3Tyzgu3rafUudVw?em=2&amp;wdAr=1.7777777777777777' }
+    
+              //Add more entries when given more ppts
+            
+            ];
+    
+            // Function to update iframe src based on current date and time
+            
+
+
+    // Find the most recent entry
+    if (pastEntries.length > 0) {
+        const mostRecentEntry = pastEntries[pastEntries.length - 1];
+        document.getElementById('ppt-container').src = mostRecentEntry.url;
+    }
+
+
+    
+            // Check every minute to see if the iframe source needs to be updated
+            setInterval(updateIframeSrc, 60000);
+    
+            // Initial check on page load
+            updateIframeSrc();
+        </script>
+    </div>
+
+
+<!-- Green box with text slideshow -->
+<div class="text-slideshow-container">
+    <div class="text-slideshow">
+        <p>Epic Joke of the Day: Why was 6 scared of 7? 7, 8, 9!</p>
+        <p>Why do plants hate maths? Because it gives them square roots</p>
+        <p>Did you know? A 'jiffy' is an actual unit of time.</p>
+        <!-- Add more texts as needed -->
+    </div>
+</div>
+
+    <script>
+function openSidePanel() {
+    document.getElementById("mySidePanel").style.width = "200px";
+    document.getElementById("mainContent").style.marginLeft = "250px";
+    document.querySelector(".ppt-container").style.marginLeft = "250px"; // Adjust the ppt-container
+}
+
+function closeSidePanel() {
+    document.getElementById("mySidePanel").style.width = "0";
+    document.getElementById("mainContent").style.marginLeft = "0";
+    document.querySelector(".ppt-container").style.marginLeft = "auto"; // Reset to original centered position
+}
+
+
+
+        // text slideshow
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.text-slideshow p');
+        const totalSlides = slides.length;
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.style.display = (i === index) ? 'block' : 'none';
+            });
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            showSlide(currentSlide);
+        }
+
+        setInterval(nextSlide, 6000); // minute=60000ms
+        showSlide(currentSlide); // Show the first slide initially
+    </script>
+</body>
+</html>
