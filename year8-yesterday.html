@@ -170,7 +170,8 @@ function updateIframeSrc() {
             document.getElementById('dynamic-iframe').src = yesterdayEntry.url;
         }
     }
-    updateIframeSrc();
+        setInterval(updateIframeSrc, 360000);
+        updateIframeSrc()
 </script>
       </div>
   
